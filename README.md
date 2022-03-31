@@ -40,10 +40,10 @@ ln -s /usr/lib64/python2.7 python2
 > rpm -qf `which yum`
 > rpm -Va > /tmp/rpm_va
 
-- copiando um arquivo entre servidores
-> scp root@10.0.0.69:/usr/bin/python2.7 root@192.168.1.104:/usr/bin/python2.7
+## copiando um arquivo entre servidores
+> scp <user_01>@<ip_01>:/usr/bin/python2.7 <user_02>@<ip_02>:/usr/bin/python2.7
 
-> scp jupyter@192.168.1.104:/home/jupyter/data 
+> scp jupyter@<user_02>:/home/jupyter/data 
 
 - processo em htop
 > htop -p $(pgrep -d',' -f "jupyter")
@@ -67,9 +67,8 @@ abrir portas o servico
 reiniciar firewall
 > firewall-cmd --reload
 
-## bibliografia
-
-* [link reda hat](https://access.redhat.com/solutions/21199)
+## links
+* [link red-hat](https://access.redhat.com/solutions/21199)
 
 ## Encontre os maiores diretórios no Linux
 
